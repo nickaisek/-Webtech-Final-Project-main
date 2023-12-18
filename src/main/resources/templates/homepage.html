@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keza's car website</title>
+  <!--my css-->
+  <link rel="stylesheet" href="/css/style.css">
+  <!--udukarito-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<header>
+  <!--nav containe-->
+  <div class="nav container">
+    <!--menu icon-->
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <!--logo-->
+    <a href="#" class="logo">Keza<span>Cars</span></a>
+    <!--navigation list-->
+    <ul class="navbar">
+      <li>
+        <a href="#home" class="active">Home</a>
+      </li>
+      <li>
+        <a href="#cars">Cars</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a th:href="@{/login}"  >Login/Sign Up</a>
+      </li>
+    </ul>
+    <!--search icon-->
+    <i class='bx bx-search-alt-2' id="search-icon"></i>
+    <!--search box-->
+    <div class="search-box container">
+      <input type="search" name="" id="" placeholder="Search">
+    </div>
+  </div>
+</header>
+
+<!--<p sec:authorize="hasRole('ROLE_ANONYMOUS')">Text visible to anonymous.</p>-->
+<!--<p sec:authorize="hasRole('USER')">Text visible to user.</p>-->
+<!--<p sec:authorize="hasRole('ADMIN')">Text visible to admin.</p>-->
+<!--<p sec:authorize="isAuthenticated()">Text visible only to authenticated users.</p>-->
+
+<!--<div sec:authorize="hasRole('ROLE_ANONYMOUS')">-->
+<!--  <p><a th:href="@{/login}" th:text="'Log in'"></a></p>-->
+<!--  <p><a th:href="@{/register}" th:text="'Register'"></a></p>-->
+<!--</div>-->
+
+<!--<div sec:authorize="isAuthenticated()">-->
+<!--  <p>Logged as: <span sec:authentication="name"></span></p>-->
+<!--  <p>Has role: <span sec:authentication="authorities"></span></p>-->
+<!--  <p sec:authorize="hasAuthority('USER')"><a th:href="@{/dashboard}" th:text="'User Dashboard'"></a></p>-->
+<!--  <p sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/admin/dashboard}" th:text="'Admin Dashboard'"></a></p>-->
+<!--  <a th:href="@{/logout}">Log out</a>-->
+<!--</div>-->
+
+<section class="home" id="home">
+
+  <div class="home-text">
+    <h1> We have <br>All<br>The <span>Cars</span></h1>
+    <p>Welcome to Keza car sales website, where you can<br> explore a wide variety of high-quality vehicles <br> and find the perfect one to fit<br> your needs and budget.</p>
+
+    <a th:href="@{/register}" th:text="'Discover more'" class="btn">Discover more</a>
+  </div>
+</section>
+<!--cars selection-->
+<section class="cars" id="cars">
+  <div class="heading">
+        <span>
+            All Cars
+        </span>
+    <h2>We have a car for you!</h2>
+    <p>Our car sales offers vehicles that are specifically chosen to be suitable for the challenging roads of Rwanda, providing our customers with reliable and durable transportation options.</p>
+  </div>
+
+  <!--cars container-->
+  <div class="cars-container container">
+    <!--car1-->
+    <div class="box">
+      <img src="/img/car1.jpg" alt="">
+      <h2>Porsche </h2>
+    </div>
+    <!--car2-->
+    <div class="box">
+      <img src="/img/car2.jpg" alt="">
+      <h2>Audi A4</h2>
+    </div>
+    <!--car3-->
+    <div class="box">
+      <img src="/img/car3.jpg" alt="">
+      <h2>Black Audi</h2>
+    </div>
+    <!--car4-->
+    <div class="box">
+      <img src="/img/car4.jpg" alt="">
+      <h2>Audi A6</h2>
+    </div>
+    <!--car5-->
+    <div class="box">
+      <img src="/img/car5.jpg" alt="">
+      <h2>Audi Q3</h2>
+    </div>
+    <!--car6-->
+    <div class="box">
+      <img src="/img/car6.jpg" alt="">
+      <h2>Steeda Ford Mustang Q500</h2>
+    </div>
+  </div>
+</section>
+<section class="about container" id="about">
+  <div class="about-img">
+    <img src="/img/about.png" alt="">
+  </div>
+  <div class="about-text">
+    <span>About Us</span>
+    <h2>Affordable Prices with <br> Quality Cars</h2>
+    <p>Once upon a time, in the heart of Rwanda, A young Rwandan girl dreamed of creating a platform that would revolutionize the car sales industry. And so, Keza Cars was born.<br>
+
+      She created a user-friendly platform that provides top-notch customer service to all clients. At Keza Cars, they believe that everyone deserves to own their dream car, and that's why they offer a wide high-quality vehicles at affordable prices.<br>
+
+      From Porsche to Audi, Keza Cars has a car for everyone. They understand the importance of finding the perfect car. So, whether you're a business looking for an efficient way to manage your car inventory or an individual searching for your dream car, Keza Cars has got you covered.</p>
+    <!--about button-->
+    <a href="#" class="btn">Learn More</a>
+  </div>
+</section>
+
+<section class="footer">
+  <div class="footer-container container">
+    <div class="footer-box">
+      <a href="#" class="logo">Keza<span>Cars</span></span></a>
+      <div class="social">
+        <a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="https://www.instagram.com/"><i class='bx bxl-instagram-alt'></i></a>
+        <a href="https://twitter.com/"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+    <div class="footer-box">
+      <h3>Quick links</h3>
+      <a href="#">Home</a>
+      <a href="#">Cars</a>
+      <a href="#">About</a>
+      <a th:href="@{/register}" th:text="'Register'">Login/Signup</a>
+    </div>
+    <div class="footer-box">
+      <h3>Legal</h3>
+      <a href="#">Privacy</a>
+      <a href="#">Refunds</a>
+      <a href="#">Cookies</a>
+    </div>
+    <div class="footer-box">
+      <h3>Contact Us:</h3>
+      <p>Rwanda:+250785421798</p>
+      <p>Kenya:+2548758702</p>
+      <p>Tanzania:+255793492</p>
+      <p>Japan:+816492092</p>
+    </div>
+  </div>
+</section>
+
+<div class="copyright">
+  <p>&#169; UWASE K M Nicqueuse All Rights Reserved</p>
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>

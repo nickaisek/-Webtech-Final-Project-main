@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website where you can sell your car or buy the car you've been searching for, whether it's used or you can find brand new cars offered by the wide variety of dealerships on the site. If you own a dealership, you can contact us to have it featured on this site.">
+    <meta name="keywords" content="car, cars, purchase, buy, sale, sell, dealership, new, brand new">
+    <title> Keza Cars - Vehicle </title>
+   
+    <script src="https://kit.fontawesome.com/de0eb60c48.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+
+
+<div class="nav container">
+    <!--menu icon-->
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <!--logo-->
+    <a href="#" class="logo">Keza<span>Cars</span></a>
+    <!--navigation list-->
+    <ul class="navbar">
+        <li>
+            <a href="#home" class="active">Home</a>
+        </li>
+        <li>
+            <a href="#cars">Cars</a>
+        </li>
+        <li>
+            <a href="#about">About</a>
+        </li>
+        <li>
+            <a th:href="@{/login}">Login/Sign Up</a>
+        </li>
+    </ul>
+    <!--search icon-->
+    <i class='bx bx-search-alt-2' id="search-icon"></i>
+    <!--search box-->
+    <div class="search-box container">
+        <input type="search" name="" id="" placeholder="Search">
+    </div>
+</div>
+<!-- <form class="search-form">  -->
+    <!-- <input class="search-bar" type="search" placeholder="¿Qué auto estas buscando?">
+    <button class="search-btn"><img src="../assets/img/icons/magnifying-glass.png" alt="icono busqueda" width="25"></button>
+</form> -->
+
+</header>
+
+<main class="main-car">
+    <div class="return-comprar">
+        <a class="btn-return-comprar" th:href="@{/buy}"><i class="fas fa-arrow-left"></i> <p>Back</p></a>
+    </div>
+
+    <section class="car-section">
+        <section class="car-img">
+            <img src="/img/golf-gti.webp" alt="Volkswagen Golf GTI">
+            <div class="car-secondary-images">
+                <img src="/img/vw-golf-costado.webp" alt="Volkswagen Golf GTI side view">
+                <img src="/img/vw-golf-motor.webp" alt="Volkswagen Golf GTI engine">
+                <img src="/img/volkswagen-golf-gti-interior.webp" alt="Volkswagen Golf GTI interior">
+            </div>
+        </section>
+
+        <section class="car-info">
+            <div class="car-brand-model">
+                <img src="/img/volkswagen-logo.webp" alt="Volkswagen Logo">
+                <h3>Volkswagen Golf GTI</h3>
+            </div>
+            <div class="year-km">
+                <p>Year: <span>2020</span></p>
+                <p>Kilometers: <span>35,678</span></p>
+            </div>
+            <h4 class="car-price">USD <span>32,590</span></h4>
+        </section>
+
+        <section class="car-technical-data">
+            <h3>Technical Data:</h3>
+            <div class="technical-data">
+                <p>Brand: <span>Volkswagen</span></p>
+                <p>Model: <span>Golf GTI</span></p>
+                <p>Year: <span>2020</span></p>
+                <p>Mileage: <span>35,678</span></p>
+                <p>Color: <span>White</span></p>
+                <p>Engine: <span>1.6</span> cc</p>
+                <p>Transmission: <span>6</span> speeds</p>
+            </div>
+        </section>
+        <section class="car-description">
+            <h3>Description</h3>
+            <p>2020 Volkswagen Golf GTI in excellent condition, single owner, no issues, no scratches or accidents. All services done on time.</p>
+            <a class="green" th:href="@{/pay}">Purchase</a>
+
+        </section>
+        </section>
+
+  
+
+        <section class="similar-cars">
+            <h3>Similar vehicles</h3>
+            <div class="list-similar-cars">
+                <a class="card-car" th:href="@{/kicks}"> <!-- Car Card -->
+                    <img src="/img/nissan-kicks.webp" alt="nissan car image">
+                    <div class="info-car"> <!-- Vehicle Data -->
+                        <div class="car-brand">
+                            <img src="/img/nissan-logo.webp" alt="nissan logo" width="30">
+                            <h3>Nissan Kicks</h3>
+                        </div>
+                        <div class="car-data">
+                            <p>Year: 2021</p>
+                            <p>Kilometers: 23500</p>
+                            <p>USD 29700</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-car" th:href="@{/renault}"> <!-- Car Card -->
+                    <img src="/img/clio.webp" alt="renault car image">
+                    <div> <!-- Vehicle Data -->
+                        <div class="car-brand">
+                            <img src="/img/renault-logo.webp" alt="renault logo" width="50">
+                            <h3>Renault Clio</h3>
+                        </div>
+                        <div>
+                            <p>Year: 2018</p>
+                            <p>Kilometers: 46900</p>
+                            <p>USD 17600</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card-car" th:href="@{/suzuki}"> <!-- Car Card -->
+                    <img src="/img/swift.webp" alt="suzuki car image">
+                    <div> <!-- Vehicle Data -->
+                        <div class="car-brand">
+                            <img src="/img/suzuki_logo.webp" alt="suzuki logo" width="30">
+                            <h3>Suzuki Swift</h3>
+                        </div>
+                        <div>
+                            <p>Year: 2017</p>
+                            <p>Kilometers: 90600</p>
+                            <p>USD 14600</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-car" th:href="@{/hyundai}"> <!-- Car Card -->
+                    <img src="/img/accent.webp" alt="hyundai car image">
+                    <div> <!-- Vehicle Data -->
+                        <div class="car-brand">
+                            <img src="/img/hyundai-logo.webp" alt="hyundai logo" width="40">
+                            <h3>Hyundai Accent</h3>
+                        </div>
+                        <div>
+                            <p>Year: 2018</p>
+                            <p>Kilometers: 108500</p>
+                            <p>USD 21800</p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="left-arrow">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="right-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+
+            </div>
+        </section>
+        </main>
+        
+    <!-- My Javascript -->
+    <script src="/js/app.js"></script>
+</body>
+</html>

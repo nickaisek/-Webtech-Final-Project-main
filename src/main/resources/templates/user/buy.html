@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website where you can sell your car or buy the car you're looking for, whether it's used or new, as there are many car dealerships on the site. If you have a dealership, you can contact us to have it appear on this site.">
+  <meta name="keywords" content="car, cars, buy, buying, sell, selling, dealership, new, used">
+  <title>  Vehicle Listings </title>
+
+
+  <script src="https://kit.fontawesome.com/de0eb60c48.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+  <section class="navbar"> <!-- Navigation bar -->
+    <div class="container-1600">
+      <div>
+
+        <button id="hamburguer" class="hamburguer"><i class="fas fa-bars"></i></button>
+      </div>
+
+      <div class="nav container">
+        <!--menu icon-->
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <!--logo-->
+        <a href="#" class="logo">Keza<span>Cars</span></a>
+        <!--navigation list-->
+        <ul class="navbar">
+          <li>
+            <a href="#home" class="active">Home</a>
+          </li>
+          <li>
+            <a href="#cars">Cars</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="/templates/auth/login.html">Login/Sign Up</a>
+          </li>
+        </ul>
+        <!--search icon-->
+        <i class='bx bx-search-alt-2' id="search-icon"></i>
+        <!--search box-->
+        <div class="search-box container">
+          <input type="search" name="" id="" placeholder="Search">
+        </div>
+      </div>
+    </div>
+
+    <!-- <form class="search-form">
+         <input class="search-bar" type="search" placeholder="What car are you looking for?">
+        <button class="search-btn"><img src="../assets/img/icons/magnifying-glass.png" alt="search icon" width="25"></button>
+    </form> -->
+  </section>
+</header>
+
+<main class="main-buy">
+
+  <section class="amount-sort-section"> <!-- Vehicle count and sorting -->
+    <p class="total-vehicles">6789 vehicles found</p>
+    <div class="sort-vehicles">
+      <img src="/img/ordenar-por-opcion-de-boton-de-interfaz-de-atributos.png" alt="sorting icon" width="25">
+      <p>Sort by:</p>
+      <select name="sorting" >
+        <option value="">Most relevant</option>
+        <option value="">Lowest price</option>
+        <option value="">Highest price</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="filter-cars"> <!-- Filter and Vehicles -->
+    <section class="filters"> <!-- Filter -->
+      <div class="filter-title">
+        <img src="/img/flecha-hacia-abajo.png" alt="filter icon" width="25">
+        <p>Filter:</p>
+        <a href="#">Filter</a>
+      </div>
+      <div>
+        <p>Condition</p>
+        <img src="/img/flecha-hacia-abajo.png" alt="down arrow icon" width="12">
+      </div>
+      <div>
+        <p>Brand</p>
+        <img src="/img/flecha-hacia-abajo.png" alt="down arrow icon" width="12">
+      </div>
+      <div>
+        <p>Model</p>
+        <img src="/img/flecha-hacia-abajo.png" alt="down arrow icon" width="12">
+      </div>
+      <div>
+        <p>Year</p>
+        <img src="/img/flecha-hacia-abajo.png" alt="down arrow icon" width="12">
+      </div>
+      <div>
+        <p>Price</p>
+        <img src="/img/flecha-hacia-abajo.png" alt="down arrow icon" width="12">
+      </div>
+      <div>
+        <p>Kilometers</p>
+        <img src="/img/flecha-hacia-abajo.png" alt="down arrow icon" width="12">
+      </div>
+      <div>
+        <p>Location</p>
+        <img src="/img/flecha-hacia-abajo.png" alt="down arrow icon" width="12">
+      </div>
+    </section>
+    <section class="cars-list"> <!-- Vehicle Listing -->
+      <a class="card-car" th:href="@{/kicks}"> <!-- Car Card -->
+        <img src="/img/nissan-kicks.webp" alt="nissan car image">
+        <div class="info-car"> <!-- Vehicle Data -->
+          <div class="car-brand">
+            <img src="/img/nissan-logo.webp" alt="nissan logo" width="30">
+            <h3>Nissan Kicks</h3>
+          </div>
+          <div class="car-data">
+            <p>Year: 2021</p>
+            <p>Kilometers: 23500</p>
+            <p>USD 29700</p>
+          </div>
+        </div>
+      </a>
+      <a class="card-car" th:href="@{/vwcar}"> <!-- Car Card -->
+        <img src="/img/golf-gti.webp" alt="car image">
+        <div> <!-- Vehicle Data -->
+          <div class="car-brand">
+            <img src="/img/volkswagen-logo.webp" alt="volkswagen logo" width="28">
+            <h3>Volkswagen Golf GTI</h3>
+          </div>
+          <div>
+            <p>Year: 2020</p>
+            <p>Kilometers: 35678</p>
+            <p>USD 32590</p>
+          </div>
+        </div>
+      </a>
+
+      <a class="card-car" th:href="@{/bmw}"> <!-- Car Card -->
+        <img src="/img/320i.webp" alt="BMW car image">
+        <div> <!-- Vehicle data -->
+          <div class="car-brand">
+            <img src="/img/logo-bmw.webp" alt="BMW logo" width="30">
+            <h3>BMW 320i</h3>
+          </div>
+          <div>
+            <p>Year: 2014</p>
+            <p>Kilometers: 190780</p>
+            <p>USD 31400</p>
+          </div>
+        </div>
+      </a>
+      <a class="card-car" th:href="@{/ford}"> <!-- Car Card -->
+        <img src="/img/fiesta.webp" alt="Ford car image">
+        <div> <!-- Vehicle data -->
+          <div class="car-brand">
+            <img src="/img/logo-ford.webp" alt="Ford logo" width="50">
+            <h3>Ford Fiesta</h3>
+          </div>
+          <div>
+            <p>Year: 2016</p>
+            <p>Kilometers: 60790</p>
+            <p>USD 17800</p>
+          </div>
+        </div>
+      </a>
+
+
+
+      <a class="card-car" th:href="@{/mercedes}"> <!-- Car Card -->
+        <img src="/img/amg-c450.webp" alt="Mercedes car image">
+        <div> <!-- Vehicle Data -->
+          <div class="car-brand">
+            <img src="/img/logo-mercedes-benz.webp" alt="Mercedes logo" width="50">
+            <h3>Mercedes AMG C450</h3>
+          </div>
+          <div>
+            <p>Year: 2016</p>
+            <p>Kilometers: 78900</p>
+            <p>USD 59700</p>
+          </div>
+        </div>
+      </a>
+      <a class="card-car" th:href="@{/renault}"> <!-- Car Card -->
+        <img src="/img/clio.webp" alt="Renault car image">
+        <div> <!-- Vehicle Data -->
+          <div class="car-brand">
+            <img src="/img/renault-logo.webp" alt="Renault logo" width="50">
+            <h3>Renault Clio</h3>
+          </div>
+          <div>
+            <p>Year: 2018</p>
+            <p>Kilometers: 46900</p>
+            <p>USD 17600</p>
+          </div>
+        </div>
+      </a>
+      <a class="card-car" th:href="@{/suzuki}"> <!-- Car Card -->
+        <img src="/img/swift.webp" alt="Suzuki car image">
+        <div> <!-- Vehicle Data -->
+          <div class="car-brand">
+            <img src="/img/suzuki_logo.webp" alt="Suzuki logo" width="30">
+            <h3>Suzuki Swift</h3>
+          </div>
+          <div>
+            <p>Year: 2017</p>
+            <p>Mileage: 90600</p>
+            <p>USD 14600</p>
+          </div>
+        </div>
+      </a>
+      <a class="card-car" th:href="@{/hyundai}"> <!-- Car Card -->
+        <img src="/img/accent.webp" alt="Hyundai car image">
+        <div> <!-- Vehicle Data -->
+          <div class="car-brand">
+            <img src="/img/hyundai-logo.webp" alt="Hyundai logo" width="40">
+            <h3>Hyundai Accent</h3>
+          </div>
+          <div>
+            <p>Year: 2018</p>
+            <p>Mileage: 108500</p>
+            <p>USD 21800</p>
+          </div>
+        </div>
+      </a>
+    </section>
+  </section>
+
+
+</main>
+
+
+
+<!-- My Javascript -->
+<script src="/js/app.js"></script>
+</body>
+</html>
+
+

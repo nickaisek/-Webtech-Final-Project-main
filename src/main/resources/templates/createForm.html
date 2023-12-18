@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title> Keza Cars - Car inventory</title>
+  <link rel="stylesheet" href="/css/pay.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<form  th:action="@{/createForm}" method="post">
+
+  <h2>Car Information</h2>
+  <div class="first-row">
+    <div class="owner">
+  <label for="carName">Car Name:</label>
+      <div class="input-field">
+  <input type="text" id="carName" name="carName" required>
+      </div>
+    </div>
+  </div>
+  <div class="first-row">
+    <div class="owner">
+  <label for="carPrice">Car Price:</label>
+      <div class="input-field">
+  <input type="text" id="carPrice" name="carPrice" required>
+      </div>
+    </div>
+  </div>
+      <div class="first-row">
+        <div class="owner">
+  <label for="payment">Payment:</label>
+          <div class="input-field">
+            <input type="text" id="payment" name="payment" required></div>
+        </div>
+      </div>
+          <div class="first-row">
+            <div class="owner">
+  <label for="status">Status:</label>
+              <div class="input-field">
+                <input type="text" id="status" name="status" required></div>
+            </div>
+          </div>
+<!--              <div class="first-row">-->
+<!--                <div class="owner">-->
+<!--  <label for="cardescription">Description:</label>-->
+<!--                  <div class="input-field">-->
+<!--  <input type="text" id="cardescription" name="cardescription" required></div>-->
+<!--                </div>-->
+<!--              </div>-->
+  <button type="submit"  >Submit</button>
+</form>
+</div>
+</body>
+</html>
